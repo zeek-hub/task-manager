@@ -1,0 +1,20 @@
+<div class="task-item text-white p-3 rounded-3 shadow">
+  @if (isBeingEdited) {
+    <div class="d-flex justify-content-between">
+      <textarea class="bg-dark text-white align-self-start form-control w-50" [(ngModel)]="updatedTitle"></textarea>
+      <select class="mx-2 w-50 form-select fw-bold bg-dark text-white" [(ngModel)]="updatedStatus">
+        <option *ngFor="let status of allowedStatuses">{{ status }}</option>
+      </select>
+    </div>
+  }@else{
+    <div class="d-flex justify-content-between">
+      <p class="flex-grow-1 align-self-start" style="max-width: 70%; word-break: break-word">{{task.title}}</p>
+      <p [class]="getStatusClass()" class="fw-bold end-0">{{task.status}}</p>
+    </div>
+    <sup class="fw-bold">Last edit: {{ getTaskFullDate() }}</sup>
+  }
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-delete m-2 rounded-3 p-1 fw-bold" (click)="delete.emit(task.id)">Delete</button>
+      <button [class]="isBeingEdited ? 'btn-save' : 'btn-edit'" class="btn m-2 rounded-3 p-1 fw-bold" (click)="SwitchEdit()">{{ isBeingEdited ? 'Save' : 'Edit' }}</button>
+    </div>
+</div>

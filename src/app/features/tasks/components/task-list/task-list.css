@@ -1,0 +1,23 @@
+.task-list-container{
+  border: 1px solid #00ff77;
+  height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.task-list-container::-webkit-scrollbar {
+  width: 10px;
+}
+.task-list-container::-webkit-scrollbar-thumb {
+  background-color: #08ff00;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.task-list-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(120deg, #0080ff, #5900f4);
+}
+.task-list-container::-webkit-scrollbar-thumb:active {
+}
+.task-list-container::-webkit-scrollbar-track {
+  background-color: rgba(0, 255, 51, 0.06);
+  border-radius: 4px;
+}

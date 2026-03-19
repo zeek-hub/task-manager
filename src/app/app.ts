@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {TaskPage} from './features/tasks/pages/task-page/task-page';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [TaskPage],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

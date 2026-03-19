@@ -1,0 +1,63 @@
+.task-item{
+  border: rgba(60, 60, 60, 0.82) 1px solid;
+  border-left: rgba(0, 255, 119, 0.55) 3px solid;
+  transition: .2s ease-in-out;
+}
+.task-item:hover{
+  border: #00ff77 1px solid;
+  border-left: #00ff77 3px solid;
+}
+.btn-delete{
+  background: linear-gradient(145deg, #ff0000, #990000);
+  box-shadow: 0 8px 0 #660000, 0 15px 25px rgba(0,0,0,0.5);
+}
+.btn-delete:hover{
+  box-shadow: 0 10px 0 #660000, 0 18px 30px rgba(246, 0, 0, 0.6);
+}
+.btn-delete:active {
+  box-shadow: 0 4px 0 #660000;
+}
+.btn-edit{
+  background: linear-gradient(145deg, #00bbff, #003d99);
+  box-shadow: 0 8px 0 #003d99, 0 15px 25px rgba(0,0,0,0.5);
+}
+.btn-edit:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 0 #003d99, 0 18px 30px #00bbff;
+}
+.btn-edit:active {
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 #003d99;
+}
+.btn-save{
+  background: linear-gradient(145deg, #08ff00, #009947);
+  box-shadow: 0 8px 0 #009947, 0 15px 25px rgba(0,0,0,0.5);
+}
+.btn-save:hover{
+  box-shadow: 0 10px 0 #009947, 0 18px 30px #08ff00;
+}
+.btn-save:active {
+  box-shadow: 0 4px 0 #009947;
+}
+.btn{
+  border: 0;
+  font-size: 18px;
+  color: whitesmoke;
+  letter-spacing: 1px;
+  transition: all 0.1s ease;
+}
+.btn:hover{
+  transform: translateY(-2px);
+}
+.btn:active{
+  transform: translateY(4px);
+}
+.status-todo{
+  color: #FF6B6B;
+}
+.status-in-progress{
+  color: #FFA500;
+}
+.status-done{
+  color: #4CAF50;
+}

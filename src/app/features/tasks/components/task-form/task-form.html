@@ -1,0 +1,12 @@
+<div class="task-form-add p-3 rounded-3 text-white d-flex flex-column shadow">
+  <h3>Add task</h3>
+  <form>
+    <p>Task</p>
+    <input class="form-control" [(ngModel)]="title" [ngModelOptions]="{ standalone: true }">
+    <button class="btn-add mt-3 mx-3 p-1 fw-bold rounded-3" (click)="add()">Add</button>
+  </form>
+  <footer class="new-task-info p-3 d-flex flex-row m-3">
+    <p class="mx-2">ℹ️</p>
+    <p>New task must be at least 3 letters long.</p>
+  </footer>
+</div>

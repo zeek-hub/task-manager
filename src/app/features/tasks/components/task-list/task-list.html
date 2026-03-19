@@ -1,0 +1,9 @@
+<div class="position-relative">
+  <h2 class="text-white position-fixed m-3 top-0 start-50">Your tasks: {{tasks.length}}</h2>
+  <div *ngIf="tasks.length > 0; else noTasks" class="task-list-container rounded-3 p-4 mt-1 mx-5 d-flex flex-wrap shadow-lg overflow-auto">
+    <app-task-item *ngFor="let task of tasks" [task]="task" (delete)="delete.emit($event)" (update)="update.emit($event)" class="w-25 m-3"></app-task-item>
+  </div>
+  <ng-template #noTasks>
+    <h1 class="text-white m-5">No tasks...</h1>
+  </ng-template>
+</div>
