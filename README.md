@@ -1,59 +1,76 @@
-# TaskManager
+TaskManager
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.3.
+A simple task management web application built with Angular 21. This app allows users to create, edit, change status, and delete tasks, similar to a lightweight Jira board. The project is deployed online using GitHub Pages and uses MockAPI for dynamic data.
 
-## Development server
+Live Demo
 
-To start a local development server, run:
+https://zeek-hub.github.io/task-manager/
 
-```bash
+Features
+
+Add new tasks with a title and status
+
+Edit existing tasks and update their status (todo, in-progress, done)
+
+Delete tasks you no longer need
+
+Tasks are persisted online using MockAPI
+
+Dynamic, responsive, and fast single-page application
+
+Technologies
+
+Frontend: Angular 21, TypeScript, RxJS, Angular Forms
+
+Backend / API: MockAPI (REST)
+
+Deployment: GitHub Pages
+
+Getting Started (Local Development)
+Prerequisites
+
+Node.js >= 18
+
+Angular CLI >= 21
+
+Installation
+# Clone the repository
+git clone https://github.com/zeek-hub/task-manager.git
+
+# Navigate to the project
+cd task-manager
+
+# Install dependencies
+npm install
+Run Local Development Server
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser at http://localhost:4200/
 
-## Code scaffolding
+The app will automatically reload if you change any of the source files
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Build for Production
+ng build --configuration production --base-href "/task-manager/"
 
-```bash
+Production-ready files will be in dist/task-manager/browser
+
+Deploy to GitHub Pages with:
+
+npx angular-cli-ghpages --dir=dist/task-manager/browser
+Code Scaffolding
+
+Angular CLI provides powerful tools to generate new components, services, etc.:
+
 ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
+ng generate service service-name
+Testing
+Unit Tests
 ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
+End-to-End Tests
 ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Note: Angular CLI does not include an e2e framework by default.
 
-## Additional Resources
+Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Angular CLI Documentation
