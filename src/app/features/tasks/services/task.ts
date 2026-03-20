@@ -7,7 +7,9 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root',
 })
 export class Task {
-  private apiUrl: string = 'http://localhost:3000/tasks';
+  //local url - http://localhost:3000/tasks
+  private apiUrl: string = 'https://69bd3bee2bc2a25b22ae00b9.mockapi.io/api/v1/tasks';
+
   constructor(private http: HttpClient) { }
   getTasks() {
     return this.http.get<TaskModel[]>(this.apiUrl).pipe(
