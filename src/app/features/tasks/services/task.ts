@@ -8,6 +8,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class Task {
   //local url - http://localhost:3000/tasks
+  //mockAPI url - https://69bd3bee2bc2a25b22ae00b9.mockapi.io/api/v1/tasks
   private apiUrl: string = 'https://69bd3bee2bc2a25b22ae00b9.mockapi.io/api/v1/tasks';
 
   constructor(private http: HttpClient) { }

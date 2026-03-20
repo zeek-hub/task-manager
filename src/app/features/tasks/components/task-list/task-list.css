@@ -21,3 +21,33 @@
   background-color: rgba(0, 255, 51, 0.06);
   border-radius: 4px;
 }
+.search-input{
+  border: 1px solid #303030;
+  border-left: none;
+  background: transparent;
+  outline: none;
+  transition: .2s ease-in-out;
+}
+.search-input:hover{
+  border: 1px solid rgba(0, 255, 119, 0.42);
+  border-left: none;
+}
+.search-input:focus{
+  animation: pulse 1.7s ease-in infinite;
+}
+@keyframes pulse {
+  0%{
+    border: 1px solid #303030;
+    border-left: none;
+  }40%{
+    border: 1px solid #00ff77;
+    border-left: none;
+     }
+  80%{
+    border: 1px solid #00ff77;
+    border-left: none;
+  }100%{
+    border: 1px solid #303030;
+    border-left: none;
+   }
+}

@@ -25,3 +25,21 @@
   transform: translateY(4px);
   box-shadow: 0 4px 0 #009947;
 }
+.search-input{
+  border: 1px solid #303030;
+  border-left: none;
+  background: transparent;
+  outline: none;
+  transition: .2s ease-in-out;
+}
+.search-input:focus{
+  border: 1px solid #00ff77;
+  border-left: none;
+}
+.statuses-info{
+  border-left: #ff9100 2px solid;
+  background: rgba(255, 153, 0, 0.07);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #ff9100;
+}

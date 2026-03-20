@@ -7,7 +7,7 @@
       <app-task-form (addTask)="addTask($event)"/>
     </aside>
     <div class="w-75">
-      <app-task-list [tasks]="tasks" (delete)="onDelete($event)" (update)="onUpdate($event)"/>
+      <app-task-list [tasks]="tasks" (delete)="onDelete($event)" (update)="onUpdate($event)" (search)="onSearch($event)"/>
     </div>
   </main>
 </div>

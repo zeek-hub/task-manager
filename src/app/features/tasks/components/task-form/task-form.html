@@ -2,11 +2,19 @@
   <h3>Add task</h3>
   <form>
     <p>Task</p>
-    <input class="form-control" [(ngModel)]="title" [ngModelOptions]="{ standalone: true }">
+    <input type="text" placeholder="New task title" class="w-100 search-input shadow rounded-3 p-2 text-white" [(ngModel)]="title" [ngModelOptions]="{ standalone: true }">
     <button class="btn-add mt-3 mx-3 p-1 fw-bold rounded-3" (click)="add()">Add</button>
   </form>
-  <footer class="new-task-info p-3 d-flex flex-row m-3">
+  <footer class="new-task-info p-3 d-flex flex-row mx-3 mt-4">
     <p class="mx-2">ℹ️</p>
-    <p>New task must be at least 3 letters long.</p>
+    <p>New task title must be at least 3 letters long.</p>
   </footer>
+</div>
+<div class="statuses-info p-3 d-flex flex-row m-3">
+  <p class="mx-2">📊</p>
+  <p>Possible statuses:
+    <b style="color: #FF6B6B">TODO</b>,
+    <b style="color: #FFA500">In-Progress</b>,
+    <b style="color: #4CAF50">Done</b>
+  </p>
 </div>

@@ -4,7 +4,7 @@ import {TaskItem} from '../../components/task-item/task-item';
 import {TaskForm} from '../../components/task-form/task-form';
 import {TaskList} from '../../components/task-list/task-list';
 import {Task} from '../../services/task';
-import {map} from 'rxjs';
+import {filter, map} from 'rxjs';
 
 @Component({
   selector: 'app-task-page',
@@ -17,6 +17,7 @@ import {map} from 'rxjs';
 })
 export class TaskPage  implements OnInit {
   public tasks: TaskModel[] = [];
+  public filter: String = '';
 
   constructor(private TaskService: Task, private cdf: ChangeDetectorRef) { }
 
@@ -25,12 +26,13 @@ export class TaskPage  implements OnInit {
   }
   protected loadTasks() {
     this.TaskService.getTasks().pipe(
-      map((tasks => tasks.map(t => ({
+      map((tasks => tasks.filter(t => t.title.toLowerCase().includes(this.filter.toLowerCase()))
+        .map(t => ({
         id: t.id,
         title: t.title,
         status: t.status,
         lastEdit: new Date(t.lastEdit)
-      }))))
+      })))),
     ).subscribe((data) => {
       this.tasks = data;
       this.cdf.detectChanges();
@@ -67,5 +69,9 @@ export class TaskPage  implements OnInit {
   }
   onUpdate($event: TaskModel) {
     this.updateTask($event);
+  }
+  onSearch($event: string){
+    this.filter = $event;
+    this.loadTasks();
   }
 }
