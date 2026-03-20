@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { TaskPage } from './features/tasks/pages/task-page/task-page';
 
 export const routes: Routes = [
   {

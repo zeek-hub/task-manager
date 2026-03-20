@@ -1,0 +1,19 @@
+*{
+  background: #212529;
+}
+.tasks-list{
+  width: 75%;
+}
+@media (max-width: 800px) {
+  main{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  aside{
+    width: 100%;
+  }
+  .tasks-list{
+    width: 100%;
+  }
+}

@@ -1,12 +1,12 @@
-<div class="vh-100 vw-100 bg-dark d-flex flex-column">
+<div class="vh-100 vw-100 d-flex flex-column">
   <header class="w-100 text-white">
     <h1 class="m-3">Task Manager</h1>
   </header>
   <main class="w-100 d-flex">
-    <aside class="w-25 m-3">
+    <aside class="m-3">
       <app-task-form (addTask)="addTask($event)"/>
     </aside>
-    <div class="w-75">
+    <div class="tasks-list">
       <app-task-list [tasks]="tasks" (delete)="onDelete($event)" (update)="onUpdate($event)" (search)="onSearch($event)"/>
     </div>
   </main>
