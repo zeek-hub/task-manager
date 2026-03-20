@@ -1,0 +1,1 @@
+import{a as e,e as r,g as i,j as o,k as m}from"./chunk-FTVMVATJ.js";var a=[{path:"",component:m}],n=class t{static \u0275fac=function(s){return new(s||t)};static \u0275mod=r({type:t});static \u0275inj=e({imports:[i,o.forChild(a),o]})};export{n as TasksModule};
