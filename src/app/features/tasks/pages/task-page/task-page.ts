@@ -26,13 +26,7 @@ export class TaskPage  implements OnInit {
   }
   protected loadTasks() {
     this.TaskService.getTasks().pipe(
-      map((tasks => tasks.filter(t => t.title.toLowerCase().includes(this.filter.toLowerCase()))
-        .map(t => ({
-        id: t.id,
-        title: t.title,
-        status: t.status,
-        lastEdit: new Date(t.lastEdit)
-      })))),
+      map((tasks => this.sortTasks(this.mapTasks(this.filterTasks(tasks)))))
     ).subscribe((data) => {
       this.tasks = data;
       this.cdf.detectChanges();
@@ -62,6 +56,18 @@ export class TaskPage  implements OnInit {
       this.loadTasks();
       this.cdf.detectChanges();
     })
+  }
+  private filterTasks(tasks: TaskModel[]) {
+    return tasks.filter(t => t.title.toLowerCase().includes(this.filter.toLowerCase()))
+  }
+  private mapTasks(tasks: TaskModel[]) {
+    return tasks.map(t => ({
+      ...t,
+      lastEdit: new Date(t.lastEdit)
+    }))
+  }
+  private sortTasks(tasks: TaskModel[]) {
+    return tasks.sort((a: TaskModel, b: TaskModel) => a.title.localeCompare(b.title))
   }
 
   onDelete($event: number) {
