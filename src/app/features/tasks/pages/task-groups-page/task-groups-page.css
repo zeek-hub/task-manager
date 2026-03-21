@@ -1,6 +1,9 @@
 *{
   background: #212529;
 }
+.task-groups{
+  max-height: 100vh;
+}
 @media (max-width: 650px){
   *{
     padding: 5px;
@@ -8,5 +11,7 @@
   }
   .task-groups{
     margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 }

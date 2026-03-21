@@ -40,3 +40,8 @@
 .group:hover .link-goto{
   opacity: 1;
 }
+@media (max-width: 430px) {
+  .group{
+    flex-direction: column;
+  }
+}
