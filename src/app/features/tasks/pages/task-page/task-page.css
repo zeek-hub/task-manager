@@ -4,6 +4,9 @@
 .tasks-list{
   width: 75%;
 }
+a{
+  text-decoration: none;
+}
 @media (max-width: 800px) {
   main{
     flex-direction: column;

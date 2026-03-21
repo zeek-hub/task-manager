@@ -1,0 +1,42 @@
+.btn{
+  opacity: 0;
+  border: 1px solid transparent;
+  font-size: 18px;
+  color: whitesmoke;
+  transition: all 0.1s ease;
+}
+.btn:hover{
+  font-weight: bold;
+  transform: translateY(-2px) scale(1.02);
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn-delete{
+  border: 1px dashed rgba(255, 0, 0, 0.54);
+}
+.btn-edit{
+  border: 1px dashed rgba(0, 187, 255, 0.54);
+}
+.btn-save{
+  border: 1px dashed rgba(8, 255, 0, 0.54);
+}
+.link-goto{
+  text-decoration: none;
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+.group{
+  border: 2px dashed transparent;
+  transition: all 0.2s ease;
+}
+.group:hover{
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px dashed #6c6c6c;
+}
+.group:hover .btn{
+  opacity: 1;
+}
+.group:hover .link-goto{
+  opacity: 1;
+}

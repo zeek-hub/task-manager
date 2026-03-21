@@ -1,0 +1,59 @@
+.search-input{
+  border: 1px solid #303030;
+  border-left: none;
+  background: transparent;
+  outline: none;
+  transition: .2s ease-in-out;
+}
+.search-input:hover{
+  border: 1px solid rgba(0, 255, 119, 0.42);
+  border-left: none;
+}
+.search-input:focus{
+  animation: pulse 1.7s ease-in infinite;
+}
+@keyframes pulse {
+  0%{
+    border: 1px solid #303030;
+    border-left: none;
+  }40%{
+     border: 1px solid #00ff77;
+     border-left: none;
+   }
+  80%{
+    border: 1px solid #00ff77;
+    border-left: none;
+  }100%{
+     border: 1px solid #303030;
+     border-left: none;
+   }
+}
+.task-groups{
+  border: 1px solid #303030;
+  border-left: 3px solid rgba(0, 255, 119, 0.51);
+  transition: .2s ease-in-out;
+}
+.task-groups:hover{
+  border: 1px solid #00ff77;
+  border-left: 3px solid #00ff77;
+}
+.list-groups{
+  max-height: 35vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.list-groups::-webkit-scrollbar {
+  width: 10px;
+}
+.list-groups::-webkit-scrollbar-thumb {
+  background-color: #08ff00;
+}
+.list-groups::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(120deg, #0080ff, #5900f4);
+}
+.list-groups::-webkit-scrollbar-thumb:active {
+}
+.list-groups::-webkit-scrollbar-track {
+  background-color: rgba(0, 255, 51, 0.06);
+  border-radius: 4px;
+}

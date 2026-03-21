@@ -12,8 +12,16 @@ export class Task {
   private apiUrl: string = 'https://69bd3bee2bc2a25b22ae00b9.mockapi.io/api/v1/tasks';
 
   constructor(private http: HttpClient) { }
-  getTasks() {
+  /*getTasks() {
     return this.http.get<TaskModel[]>(this.apiUrl).pipe(
+      catchError(err => {
+        console.error('ERROR: ' + err);
+        return throwError(() => err);
+      })
+    )
+  }*/
+  getTasksByGroup(groupId: number) {
+    return this.http.get<TaskModel[]>(`${this.apiUrl}?groupId=${groupId}`).pipe(
       catchError(err => {
         console.error('ERROR: ' + err);
         return throwError(() => err);

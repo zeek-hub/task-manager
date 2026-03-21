@@ -34,7 +34,8 @@ export class TaskItem implements OnInit {
         id: this.task.id,
         title: this.updatedTitle,
         status: this.updatedStatus as 'TODO' | 'In-Progress' | 'Done',
-        lastEdit: new Date()
+        lastEdit: new Date(),
+        groupId: this.task.groupId
       }
       this.update.emit(newTask);
     }

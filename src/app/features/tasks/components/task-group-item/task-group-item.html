@@ -1,0 +1,17 @@
+<div class="group d-flex justify-content-between align-items-center p-2 rounded-3">
+  <aside class="d-flex justify-content-start">
+    <h5 class="mx-3">#{{ group.id }}</h5>
+    @if (isBeingEdited) {
+      <input class="form-control bg-dark text-white" [(ngModel)]="updatedName">
+    }@else{
+      <p>{{ group.name }}</p>
+    }
+  </aside>
+  <main>
+    <a [routerLink]="['/tasks', group.id]" class="link-goto">Go to {{ group.name }}</a>
+  </main>
+  <section class="d-flex justify-content-around">
+    <button [class]="isBeingEdited ? 'btn-save' : 'btn-edit'" class="btn m-2 rounded-3 p-2" (click)="SwitchEdit()">{{ isBeingEdited ? 'Save' : 'Edit' }}</button>
+    <button class="btn btn-delete m-2 rounded-3 p-2" (click)="delete.emit(group.id)">Delete</button>
+  </section>
+</div>

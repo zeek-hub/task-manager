@@ -3,4 +3,5 @@ export interface TaskModel {
   title: string;
   status: 'TODO' | 'In-Progress' | 'Done';
   lastEdit: Date;
+  groupId: number;
 }
