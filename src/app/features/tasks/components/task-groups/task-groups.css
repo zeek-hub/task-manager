@@ -47,6 +47,7 @@
 }
 .list-groups::-webkit-scrollbar-thumb {
   background-color: #08ff00;
+  border-radius: 4px;
 }
 .list-groups::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(120deg, #0080ff, #5900f4);
