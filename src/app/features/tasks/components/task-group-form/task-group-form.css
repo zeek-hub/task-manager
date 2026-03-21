@@ -11,34 +11,7 @@
   border-left: 3px solid #00ff77;
 }
 .search-input{
-  border: 1px solid #303030;
-  border-left: none;
   background: #212529;
-  outline: none;
-  transition: .2s ease-in-out;
-}
-.search-input:hover{
-  border: 1px solid rgba(0, 255, 119, 0.42);
-  border-left: none;
-}
-.search-input:focus{
-  animation: pulse 1.7s ease-in infinite;
-}
-@keyframes pulse {
-  0%{
-    border: 1px solid #303030;
-    border-left: none;
-  }40%{
-     border: 1px solid rgba(0, 255, 119, 0.42);
-     border-left: none;
-   }
-  80%{
-    border: 1px solid rgba(0, 255, 119, 0.42);
-    border-left: none;
-  }100%{
-     border: 1px solid #303030;
-     border-left: none;
-   }
 }
 .btn-add{
   border: 1px solid transparent;
@@ -56,10 +29,9 @@
 .btn-add:active {
   transform: translateY(4px) scale(0.97);
 }
-.new-task-info{
-  border-left: #0059ff 2px solid;
-  background: rgba(0, 140, 255, 0.07);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  color: #0059ff;
+
+@media (max-width: 600px) {
+  footer{
+    flex-direction: column;
+  }
 }

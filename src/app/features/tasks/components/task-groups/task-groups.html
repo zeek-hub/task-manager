@@ -1,5 +1,5 @@
 <div class="task-groups p-3 rounded-3 text-white d-flex flex-column shadow-lg">
-  <h3 class="align-self-center m-2 text-center">Task Groups</h3>
+  <h3 class="m-2 text-center">Task Groups</h3>
   <input type="text" placeholder="Search by group name..." class="search-input shadow rounded-3 p-2 text-white mx-5 m-2" #searchInput (input)="search.emit(searchInput.value)">
   <app-task-group-form (add)="onAdd($event)" class="m-3"/>
   <main class="list-groups d-flex flex-column">

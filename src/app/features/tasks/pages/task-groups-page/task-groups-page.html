@@ -1,5 +1,5 @@
-<div class="vh-100 vw-100 d-flex justify-content-center align-items-center position-relative">
-  <h1 class="position-absolute text-white start-0 top-0 m-3">Task Manager</h1>
+<div class="task-groups vh-100 vw-100 d-flex flex-column align-items-center">
+  <h1 class="text-white align-self-start m-3">Task Manager</h1>
   <app-task-groups
     [taskGroups]="taskGroups"
     (search)="onSearch($event)"

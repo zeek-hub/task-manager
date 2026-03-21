@@ -1,11 +1,11 @@
 <div class="task-group-form d-flex flex-column p-4">
   <h5>Add Group</h5>
   <input type="text" placeholder="New group name..." class="search-input shadow rounded-3 p-2 text-white mx-5 m-2" minlength="1" [(ngModel)]="newGroupName">
-  <div class="hstack d-flex justify-content-between">
+  <footer class="hstack d-flex justify-content-between">
     <div class="new-task-info p-3 d-flex flex-row mx-3 mt-4">
       <p class="mx-2">ℹ️</p>
       <p>New group name must be at least 1 letter long.</p>
     </div>
     <button class="btn-add w-25 mt-3 mx-3 p-1 rounded-3" (click)="addGroup()">Add</button>
-  </div>
+  </footer>
 </div>
