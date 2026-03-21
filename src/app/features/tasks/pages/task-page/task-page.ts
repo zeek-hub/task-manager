@@ -18,7 +18,7 @@ import {TaskGroupModel} from '../../models/task-group.model';
   styleUrl: './task-page.css',
 })
 export class TaskPage  implements OnInit {
-  private groupId!: number;
+  public groupId!: number;
   public tasks: TaskModel[] = [];
   public filter: String = '';
 
